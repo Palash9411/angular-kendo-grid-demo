@@ -5,47 +5,7 @@ import { products } from './products';
 @Component({
     selector: 'my-app',
     template: `
-        <div class="example-config">
-            <div class="inputs-row">
-                <div class="input-wrapper">
-                    <kendo-label [for]="pagerType" text="Type of the pager:"></kendo-label>
-                    <kendo-dropdownlist #pagerType [data]="pagerTypes" [(value)]="type"></kendo-dropdownlist>
-                </div>
-                <div class="input-wrapper">
-                    <kendo-label [for]="count" text="Maximum number of buttons:"></kendo-label>
-                    <kendo-numerictextbox #count format="n0" [(value)]="buttonCount"></kendo-numerictextbox>
-                </div>
-            </div>
-            <div class="inputs-row">
-                <div class="input-wrapper">
-                    <input #showinfo type="checkbox" kendoCheckBox [(ngModel)]="info" />
-                    <kendo-label [for]="showinfo" text="Show info"></kendo-label>
-                </div>
-                <div class="input-wrapper">
-                    <input #size type="checkbox" kendoCheckBox [(ngModel)]="pageSizes" />
-                    <kendo-label [for]="size" text="Show page sizes"></kendo-label>
-                </div>
-                <div class="input-wrapper">
-                    <input #buttons type="checkbox" kendoCheckBox [(ngModel)]="previousNext" />
-                    <kendo-label [for]="buttons" text="Show previous / next buttons"></kendo-label>
-                </div>
-            </div>
-            <div class="inputs-row">
-                <div class="input-wrapper">Position:</div>
-                <div class="input-wrapper">
-                    <input #positionTop type="radio" kendoRadioButton name="position" value="top" [(ngModel)]="position" />
-                    <kendo-label [for]="positionTop" text="Top"></kendo-label>
-                </div>
-                <div class="input-wrapper">
-                    <input #positionBottom type="radio" kendoRadioButton name="position" value="bottom" [(ngModel)]="position" />
-                    <kendo-label [for]="positionBottom" text="Bottom"></kendo-label>
-                </div>
-                <div class="input-wrapper">
-                    <input #positionBoth type="radio" kendoRadioButton name="position" value="both" [(ngModel)]="position" />
-                    <kendo-label [for]="positionBoth" text="Both"></kendo-label>
-                </div>
-            </div>
-        </div>
+        
         <kendo-grid
             [data]="gridView"
             [pageSize]="pageSize"
